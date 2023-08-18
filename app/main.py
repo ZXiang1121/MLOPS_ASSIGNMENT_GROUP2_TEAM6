@@ -6,7 +6,9 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-
+@app.route('/medical_predict')
+def medical():
+    return render_template('medical.html')
 
 
 if __name__ == '__main__':
