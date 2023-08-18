@@ -5,41 +5,12 @@ content%}
   <div class="container my-5">
     <h2 class="mb-5" style="font-weight: bold">Medical Prediction</h2>
 
-    <div class="form-design">
-      <form class="py-5">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
-        </div>
+    <div class="form-design py-5">
+      <h2>Predictable Form</h2>
+      <form class="py-3">
 
         <div class="row">
-          <label for="customRange3">Age range</label>
+          <label for="customRange3">Age</label>
           <input
             type="range"
             class="custom-range"
@@ -53,33 +24,197 @@ content%}
         </div>
 
         <div class="row">
+         
+
           <div class="col">
-            <label for="Select" class="form-label">Select</label>
+            <label for="Select" class="form-label">Gender</label>
             <select
               class="mb-3 form-select"
               aria-label="Default select example"
             >
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected disabled>Select Gender</option>
+              <option value="M">Male</option>
+              <option value="F">Female</option>
             </select>
           </div>
+
           <div class="col">
-            <label for="Select" class="form-label">Select</label>
+            <label for="Select" class="form-label">Fasting Blood Sugar</label>
+
             <select
               class="mb-3 form-select"
               aria-label="Default select example"
             >
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option selected disabled>Select fasting_BS</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
             </select>
+          </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputChestPain" class="form-label"
+                >Chest Pain Type</label
+              >
+              <select
+                class="mb-3 form-select"
+                aria-label="Default select example"
+              >
+                <option selected disabled>Select Chest Pain Type</option>
+                <option value="TA">Typical Angina</option>
+                <option value="ATA">Atypical Angina</option>
+                <option value="NAP">Non Anginal Pain</option>
+                <option value="ASY">Asymptomatic</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <label for="Select" class="form-label"
+              >Resting Electrocardiogram Results</label
+            >
+
+            <select
+              class="mb-0 form-select"
+              aria-label="Default select example"
+            >
+              <option selected disabled>Select Resting_ECG</option>
+              <option value="Normal">Normal</option>
+              <option value="ST">ST</option>
+              <option value="LVH">LVH</option>
+            </select>
+
+            <!-- <div id="ageHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div> -->
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputChestPain" class="form-label"
+                >ST Slope</label
+              >
+              <select
+                class="mb-3 form-select"
+                aria-label="Default select example"
+              >
+                <option selected disabled>Select ST_slope</option>
+                <option value="TA">Up</option>
+                <option value="Flat">Flat</option>
+                <option value="Down">Down</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col">
+            <label for="Select" class="form-label">Exercise Angina</label>
+
+            <select
+              class="mb-3 form-select"
+              aria-label="Default select example"
+            >
+              <option selected disabled>Select exercise_angina</option>
+              <option value="Y">Yes</option>
+              <option value="N">No</option>
+            </select>
+
+            <!-- <div id="ageHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div> -->
+          </div>
+        </div>
+
+        <div class="row">
+    
+
+
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputCholesterol" class="form-label">Cholesterol</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputCholesterol"
+                aria-describedby="cholesterolHelp"
+                placeholder="234 (Normal cholesterol level below for adults 200mg/dL)"
+              />
+            </div>
+        </div>
+        <div class="col">
+          <div class="mb-3">
+            <label for="exampleInputOldpeak" class="form-label">Oldpeak</label>
+            <input
+              type="number"
+              class="form-control"
+              id="exampleInputOldpeak"
+              aria-describedby="OldpeakHelp"
+              placeholder="ST [Numeric value measured in depression]"
+            />
+          </div>
+      </div>
+      </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputRestingBP" class="form-label">Blood Pressure (HG)</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputRestingBP"
+                aria-describedby="RestingBPHelp"
+                min="0"
+                max="120"
+                placeholder="Blood pressure in Hg"
+              />
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleInputMax_HR" class="form-label">Maximum Heart Rate</label>
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputMax_HR"
+                aria-describedby="Max_HRHelp"
+                min="0"
+                max="300"
+                placeholder="[Numeric value between 60 and 202]"
+              />
+            </div>
+        </div>
+
+        
+
+        <!-- <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+          <label class="form-check-label" for="exampleCheck1"
+            >Check me out</label
+          >
+        </div> -->
+
+        <!-- <div class="row">
+          <label for="customRange3">Age range</label>
+          <input
+            type="range"
+            class="custom-range"
+            min="0"
+            max="120"
+            step="1"
+            id="customRange3"
+            oninput="updateValue(this.value)"
+          />
+          <p>Value: <span id="rangeValue">0</span></p>
+        </div> -->
+
+
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
       </form>
     </div>
   </div>
