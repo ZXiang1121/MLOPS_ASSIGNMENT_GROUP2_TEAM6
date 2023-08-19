@@ -3,9 +3,17 @@ import pandas as pd
 import numpy as np
 from pycaret.classification import *
 import pickle
+import os
+
 
 
 app = Flask(__name__)
+
+script_dir = os.path.dirname(os.path.abspath(os.getcwd()))
+
+model_dir = os.path.join(script_dir, 'models')
+
+# model_path = os.path.join(model_dir, '/cv_issue-pipeline.pkl')
 
 # medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
 
@@ -49,8 +57,9 @@ def medical_predict():
         #     resting_ECG, max_HR, exercise_angina, old_peak, st_slope]]
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
-        pipeline = load_model(r'C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline')
-
+        
+        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline'))
+        print(pipeline)
         # model = pickle.load(f)
         data = {
         'age': age,
