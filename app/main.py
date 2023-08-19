@@ -16,6 +16,15 @@ loaded_pipeline = load_model(model_path)
 print(loaded_pipeline)
 
 # medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
+from flask import Flask, render_template, request, url_for, redirect
+import pandas as pd
+import numpy as np
+from pycaret.classification import *
+import pickle
+
+
+
+# medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
 
 
 @app.route('/')
@@ -80,6 +89,7 @@ zx_model_path = r'models\cv_issue-pipeline_parik'
 # Load the entire pipeline from the saved pickle file using pycaret's load_model
 pipeline = load_model(zx_model_path)
 print(pipeline)
+
 
 @app.route('/medical_predict', methods=['GET', 'POST'])
 def medical_predict():
