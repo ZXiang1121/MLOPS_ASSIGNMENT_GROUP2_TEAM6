@@ -69,7 +69,7 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model(os.path.join(model_dir, 'resale_price_pipeline_zx'))
+    pipeline = load_model(r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\resale_price_pipeline_zx")
     print(pipeline)
     # Use the loaded pipeline to make predictions using the predict_model function
     pred_df = predict_model(pipeline, data=input_df)
@@ -93,7 +93,7 @@ def predict():
 @app.route('/medical_predict', methods=['GET', 'POST'])
 def medical_predict():
 
-    pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_testing'))
+    pipeline = load_model(r'C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline_testing')
     print(pipeline)
     # with open(medical_model_file, 'rb') as f:
     if request.method == "POST":
@@ -119,7 +119,7 @@ def medical_predict():
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
         
-        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_testing'))
+        pipeline = load_model(r'C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline_testing')
         print(pipeline)
         # model = pickle.load(f)
         data = {
