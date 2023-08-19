@@ -6,21 +6,33 @@ content%}
     <h2 class="mb-5" style="font-weight: bold">Medical Prediction</h2>
 
     <div class="form-design py-5">
+     
       <h2>Predictable Form</h2>
-      <form class="py-3">
-
+      <form class="py-3"  method="POST">
         <div class="row">
-          <label for="customRange3">Age</label>
+          <!-- <label for="customRange3">Age</label>
           <input
             type="range"
+            name = "age"
             class="custom-range"
             min="0"
             max="120"
             step="1"
             id="customRange3"
             oninput="updateValue(this.value)"
+            required
           />
-          <p>Value: <span id="rangeValue">0</span></p>
+          <p>Value: <span id="rangeValue">0</span></p> -->
+
+            <div class="mb-3">
+              <label for="exampleInputAge" class="form-label">Age</label>
+              <input
+                type="number"
+                name = "age"
+                class="form-control"
+       
+              />
+        </div>
         </div>
 
         <div class="row">
@@ -31,6 +43,8 @@ content%}
             <select
               class="mb-3 form-select"
               aria-label="Default select example"
+              name="gender"
+              required
             >
               <option selected disabled>Select Gender</option>
               <option value="M">Male</option>
@@ -44,6 +58,8 @@ content%}
             <select
               class="mb-3 form-select"
               aria-label="Default select example"
+              name="fasting_BS"
+              required
             >
               <option selected disabled>Select fasting_BS</option>
               <option value="0">0</option>
@@ -62,6 +78,8 @@ content%}
               <select
                 class="mb-3 form-select"
                 aria-label="Default select example"
+                name="chest_pain"
+                required
               >
                 <option selected disabled>Select Chest Pain Type</option>
                 <option value="TA">Typical Angina</option>
@@ -80,6 +98,8 @@ content%}
             <select
               class="mb-0 form-select"
               aria-label="Default select example"
+              name = "resting_ECG"
+              required
             >
               <option selected disabled>Select Resting_ECG</option>
               <option value="Normal">Normal</option>
@@ -102,6 +122,8 @@ content%}
               <select
                 class="mb-3 form-select"
                 aria-label="Default select example"
+                name="ST_slope"
+                required
               >
                 <option selected disabled>Select ST_slope</option>
                 <option value="TA">Up</option>
@@ -117,6 +139,8 @@ content%}
             <select
               class="mb-3 form-select"
               aria-label="Default select example"
+              name="exercise_angina"
+              required
             >
               <option selected disabled>Select exercise_angina</option>
               <option value="Y">Yes</option>
@@ -139,9 +163,11 @@ content%}
               <input
                 type="number"
                 class="form-control"
+                name="cholesterol"
                 id="exampleInputCholesterol"
                 aria-describedby="cholesterolHelp"
                 placeholder="234 (Normal cholesterol level below for adults 200mg/dL)"
+                required
               />
             </div>
         </div>
@@ -151,9 +177,11 @@ content%}
             <input
               type="number"
               class="form-control"
+              name="old_peak"
               id="exampleInputOldpeak"
               aria-describedby="OldpeakHelp"
               placeholder="ST [Numeric value measured in depression]"
+              required
             />
           </div>
       </div>
@@ -166,11 +194,13 @@ content%}
               <input
                 type="number"
                 class="form-control"
+                name="resting_BP"
                 id="exampleInputRestingBP"
                 aria-describedby="RestingBPHelp"
                 min="0"
                 max="120"
                 placeholder="Blood pressure in Hg"
+                required
               />
             </div>
           </div>
@@ -182,10 +212,12 @@ content%}
                 type="number"
                 class="form-control"
                 id="exampleInputMax_HR"
+                name="max_HR"
                 aria-describedby="Max_HRHelp"
                 min="0"
                 max="300"
                 placeholder="[Numeric value between 60 and 202]"
+                required
               />
             </div>
         </div>
@@ -214,7 +246,7 @@ content%}
         </div> -->
 
 
-        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+        <button type="submit" value="Predict" class="btn btn-primary mt-4">Submit</button>
       </form>
     </div>
   </div>
