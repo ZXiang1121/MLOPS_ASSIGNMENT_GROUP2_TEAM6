@@ -39,6 +39,7 @@ def submit():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def predict():
+    
     # Get form data
     floor_area_sqm = request.form['floor_area_sqm']
     latitude = request.form['latitude']
@@ -91,7 +92,8 @@ def predict():
 
 @app.route('/medical_predict', methods=['GET', 'POST'])
 def medical_predict():
-    pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_zx'))
+
+    pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_testing'))
     print(pipeline)
     # with open(medical_model_file, 'rb') as f:
     if request.method == "POST":
@@ -117,7 +119,7 @@ def medical_predict():
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
         
-        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_zx'))
+        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_testing'))
         print(pipeline)
         # model = pickle.load(f)
         data = {
