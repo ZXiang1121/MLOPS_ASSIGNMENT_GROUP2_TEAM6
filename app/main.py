@@ -1,33 +1,91 @@
-from flask import Flask, render_template, request, url_for, redirect
-import pandas as pd
+from pycaret.regression import *
 import numpy as np
+import pandas as pd
+from flask import Flask, render_template, request, url_for, redirect
 from pycaret.classification import *
 import pickle
+import joblib
+from pathlib import Path
 import os
 
+app = Flask(__name__, template_folder='templates')
 
+# model_path = r'models\my_best_pipeline'
 
-app = Flask(__name__)
+# # Load the entire pipeline from the saved pickle file using pycaret's load_model
+# loaded_pipeline = load_model(model_path)
+# print(loaded_pipeline)
+
+# medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
 
 script_dir = os.path.dirname(os.path.abspath(os.getcwd()))
 
 model_dir = os.path.join(script_dir, 'models')
 
-# model_path = os.path.join(model_dir, '/cv_issue-pipeline.pkl')
-
-# medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
-
-
 @app.route('/')
 def home():
     return render_template('home.html')
 
+@app.route('/parik')
+def parik():
+    return render_template('parik_hdb.html')
 
+@app.route('/submit')
+def submit():
+    original_resale_price = request.args.get('original_resale_price')
+    return render_template('submit.html', data=float(original_resale_price))
+
+
+
+@app.route('/predict', methods=['GET', 'POST'])
+def predict():
+    # Get form data
+    floor_area_sqm = request.form['floor_area_sqm']
+    latitude = request.form['latitude']
+    longitude = request.form['longitude']
+    cbd_dist = request.form['cbd_dist']
+    min_dist_mrt = request.form['min_dist_mrt']
+    remaining_lease = request.form['remaining_lease']
+    flat_type = request.form['flat_type']
+    storey_range = request.form['storey_range']
+    flat_model = request.form['flat_model']
+    region = request.form['region']
+
+    # Convert the form data to a dictionary
+    input_data = {
+        'floor_area_sqm': float(floor_area_sqm),
+        'latitude': float(latitude),
+        'longitude': float(longitude),
+        'cbd_dist': float(cbd_dist),
+        'min_dist_mrt': float(min_dist_mrt),
+        'remaining_lease': float(remaining_lease),
+        'flat_type': flat_type,
+        'storey_range': storey_range,
+        'flat_model': flat_model,
+        'region': region,
+    }
+
+    # Convert the input_data dictionary to a DataFrame
+    input_df = pd.DataFrame([input_data])
+
+    pipeline = load_model(os.path.join(model_dir, 'resale_price_pipeline_zx'))
+    print(pipeline)
+    # Use the loaded pipeline to make predictions using the predict_model function
+    pred_df = predict_model(pipeline, data=input_df)
+
+    # Extract the prediction value from the DataFrame (assuming the column name is "Label")
+    prediction_value = pred_df['prediction_label'][0]  # Get the first prediction value
+    original_resale_price = np.exp(prediction_value)
+
+    return redirect(url_for('submit', original_resale_price=original_resale_price))
 # @app.route('/medical_result')
 # def medical_result():
 #     prediction = request.args.get('prediction')
 #     print(prediction)
 #     return render_template('medical_result.html', prediction=prediction)
+    
+
+
     
 
 
@@ -58,7 +116,7 @@ def medical_predict():
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
         
-        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline'))
+        pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_zx'))
         print(pipeline)
         # model = pickle.load(f)
         data = {

@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <form action="{{url_for('submit')}}" method="POST">
+          <h1>The price of the hdb is ${{ data }}</h1>
+        </form>
+      </div>
+    </div>
+  </body>
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins-Regular";
+      font-size: 13px;
+      margin: 0;
+      color: black;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      background: url("https://images.unsplash.com/photo-1617275249641-322ed29f098e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2luZ2Fwb3JlJTIwaGRifGVufDB8fDB8fHww&w=1000&q=80")
+        no-repeat right center;
+      background-size: cover;
+    }
+
+    .inner {
+      position: absolute;
+      top: 50%;
+      left: 25.07%;
+      transform: translateY(-50%);
+      width: 800px;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      padding: 7px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</html>
