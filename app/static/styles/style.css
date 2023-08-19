@@ -131,3 +131,39 @@ body {
   opacity: 0.3;
   z-index: -1;
 }
+
+<<<<<<< HEAD
+.predict_hdb{
+=======
+.form-design {
+  background-color: #fff;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0 65px 0 45px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1),
+    /* Top left */ -2px 2px 8px rgba(0, 0, 0, 0.1),
+    /* Top right */ 2px -2px 8px rgba(0, 0, 0, 0.1),
+    /* Bottom left */ -2px -2px 8px rgba(0, 0, 0, 0.1); /* Bottom right */
+  /* box-shadow: inset 2px 0px 8px rgba(0, 0, 0, 0.1),
+    inset -2px 0px 8px rgba(0, 0, 0, 0.1),
+    inset 0px 2px 8px rgba(0, 0, 0, 0.1),
+    inset 0px -2px 8px rgba(0, 0, 0, 0.1);  */
+}
+
+.medical_background img {
+>>>>>>> ca1307d53179738424482976f2bd6ec68e3c2d34
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0.8;
+  pointer-events: none;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1px);
+  opacity: 0.3;
+  z-index: -1;
+}
