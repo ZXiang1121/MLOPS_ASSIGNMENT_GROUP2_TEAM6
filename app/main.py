@@ -91,7 +91,8 @@ def predict():
 
 @app.route('/medical_predict', methods=['GET', 'POST'])
 def medical_predict():
-    
+    pipeline = load_model(os.path.join(model_dir, 'cv_issue-pipeline_zx'))
+    print(pipeline)
     # with open(medical_model_file, 'rb') as f:
     if request.method == "POST":
         print("Keys in request.form:", list(request.form.keys()))
