@@ -10,63 +10,28 @@ content%}
       <h2>Predictable Form</h2>
       <form class="py-3"  method="POST">
         <div class="row">
-          <!-- <label for="customRange3">Age</label>
-          <input
-            type="range"
-            name = "age"
-            class="custom-range"
-            min="0"
-            max="120"
-            step="1"
-            id="customRange3"
-            oninput="updateValue(this.value)"
-            required
-          />
-          <p>Value: <span id="rangeValue">0</span></p> -->
 
+          <div class="col">
             <div class="mb-3">
               <label for="exampleInputAge" class="form-label">Age</label>
-              <input
-                type="number"
-                name = "age"
-                class="form-control"
-       
-              />
-        </div>
-        </div>
-
-        <div class="row">
-         
-
-          <div class="col">
-            <label for="Select" class="form-label">Gender</label>
-            <select
-              class="mb-3 form-select"
-              aria-label="Default select example"
-              name="gender"
-              required
-            >
-              <option selected disabled>Select Gender</option>
-              <option value="M">Male</option>
-              <option value="F">Female</option>
-            </select>
+              <input type="number" name = "age" class="form-control"/>
+            </div>
           </div>
 
-          <div class="col">
-            <label for="Select" class="form-label">Fasting Blood Sugar</label>
-
-            <select
-              class="mb-3 form-select"
-              aria-label="Default select example"
-              name="fasting_BS"
-              required
-            >
-              <option selected disabled>Select fasting_BS</option>
-              <option value="0">0</option>
-              <option value="1">1</option>
-            </select>
-          </div>
-          
+            <div class="col">
+              <label for="Select" class="form-label">Gender</label>
+              <select
+                class="mb-3 form-select"
+                aria-label="Default select example"
+                name="gender"
+                required
+              >
+                <option selected disabled>Select Gender</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </div>
+   
         </div>
 
         <div class="row">
@@ -82,17 +47,35 @@ content%}
                 required
               >
                 <option selected disabled>Select Chest Pain Type</option>
-                <option value="TA">Typical Angina</option>
-                <option value="ATA">Atypical Angina</option>
-                <option value="NAP">Non Anginal Pain</option>
-                <option value="ASY">Asymptomatic</option>
+                <option value="TA">Typical Angina (TA)</option>
+                <option value="ATA">Atypical Angina (ATA)</option>
+                <option value="NAP">Non Anginal Pain (NAP)</option>
+                <option value="ASY">Asymptomatic (ASY)</option>
               </select>
             </div>
+          </div>
+          
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label for="Select" class="form-label">Fasting Blood Sugar</label>
+
+            <select
+              class="mb-3 form-select"
+              aria-label="Default select example"
+              name="fasting_BS"
+              required
+            >
+              <option selected disabled>Select fasting_BS</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select>
           </div>
 
           <div class="col">
             <label for="Select" class="form-label"
-              >Resting Electrocardiogram Results</label
+              >Resting ECG</label
             >
 
             <select
@@ -166,6 +149,8 @@ content%}
                 name="cholesterol"
                 id="exampleInputCholesterol"
                 aria-describedby="cholesterolHelp"
+                min="0"
+                max="300"
                 placeholder="234 (Normal cholesterol level below for adults 200mg/dL)"
                 required
               />
@@ -198,7 +183,7 @@ content%}
                 id="exampleInputRestingBP"
                 aria-describedby="RestingBPHelp"
                 min="0"
-                max="120"
+                max="200"
                 placeholder="Blood pressure in Hg"
                 required
               />
@@ -215,8 +200,7 @@ content%}
                 name="max_HR"
                 aria-describedby="Max_HRHelp"
                 min="0"
-                max="300"
-                placeholder="[Numeric value between 60 and 202]"
+                max="400"
                 required
               />
             </div>
@@ -249,6 +233,37 @@ content%}
         <button type="submit" value="Predict" class="btn btn-primary mt-4">Submit</button>
       </form>
     </div>
+
+    {% if prediction == 0 %}
+    <div class="row">
+    <div class="card border-success mb-3">
+      <div class="card-body text-success">
+        <h5 class="card-title">{{prediction}}: Normal</h5>
+        <p class="card-text">Probability: {{score}}%</p>
+      </div>
+    </div>
+    {% elif prediction == 1 %}
+    <div class="row">
+    <div class="card border-danger mb-3">
+      <div class="card-body text-danger">
+        <h5 class="card-title">{{prediction}}: Cardiovascular Issue Detected</h5>
+        <p class="card-text">Probability: {{score}}%</p>
+      </div>
+    </div>
+  </div>
+
+  {% else %}
+  <div class="row">
+    <div class="card border-secondary mb-3">
+      <div class="card-body text-secondary">
+        Make a Prediction
+      </div>
+    </div>
+  </div>
+  
+  {% endif %}
+
+
   </div>
 </div>
 

@@ -8,7 +8,7 @@ import joblib
 from pathlib import Path
 import os
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 
 # model_path = r'models\resale_price_pipeline_zx'
 
@@ -153,11 +153,15 @@ def medical_predict():
         # records = [[65, 'M', 'ATA', 23.0, 23.0, 0, 'ST', 43.0, 'Y', 23.0, 'TA']]
 
         df = pd.DataFrame(data, index=[0])
+
+        predict = predict_model(pipeline, data=df)
         
-        prediction_label = predict_model(pipeline, data=df)['prediction_label'][0]
+        prediction_label = predict['prediction_label'][0]
         print(prediction_label)
 
-        return render_template('medical_result.html', prediction=prediction_label)
+        prediction_prob = predict['prediction_score'][0] * 100
+
+        return render_template('medical_predict.html', prediction=prediction_label, score = prediction_prob)
 
     return render_template('medical_predict.html')
 
