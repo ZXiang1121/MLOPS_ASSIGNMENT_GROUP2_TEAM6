@@ -102,10 +102,9 @@ def medical_predict():
     # models_dir = os.path.join(os.getcwd(), 'models')
     
 
-    
-    
-    # with open(medical_model_file, 'rb') as f:
-    
+        # with open(medical_model_file, 'rb') as f:
+    pipeline = load_model(r'.\cv_issue-pipeline_testing')
+    print(pipeline)
     if request.method == "POST":
         print("Keys in request.form:", list(request.form.keys()))
         print("Keys in request.form:", list(request.form.values()))
@@ -127,12 +126,11 @@ def medical_predict():
         # data = [[age, gender, chest_pain, resting_BP, cholesterol, fasting_BS,
         #     resting_ECG, max_HR, exercise_angina, old_peak, st_slope]]
         # print(data)
-        # pipeline = pickle.load(open(medical_model_file, 'rb'))
-        # print(os.path.isfile(r'notebooks\cv_issue-pipeline_testing'))
 
-        pipeline = load_model(r'..\models\cv_issue-pipeline_testing')
+
+        pipeline = load_model(r'.\cv_issue-pipeline_testing')
         print(pipeline)
-        # model = pickle.load(f)
+
         data = {
         'age': age,
         'gender':gender,
