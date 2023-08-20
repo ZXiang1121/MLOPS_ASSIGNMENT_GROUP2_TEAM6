@@ -8,7 +8,7 @@ import joblib
 from pathlib import Path
 import os
 
-app = Flask(__name__, template_folder=os.path.join(os.path.dirname(file_), 'templates'))
+app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 
 # model_path = r'models\resale_price_pipeline_zx'
 
