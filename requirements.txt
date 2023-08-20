@@ -1,8 +1,7 @@
 
 gunicorn
-numpy
-pandas
+
 scikit-learn
 joblib
-pycaret==3.0.4
+pycaret
 flask
