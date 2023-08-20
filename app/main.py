@@ -126,7 +126,7 @@ def medical_predict():
         # print(data)
 
 
-        pipeline = load_model('../models/cv_issue-pipeline_testing')
+        pipeline = load_model('cv_issue-pipeline_testing')
         print(pipeline)
 
         data = {
