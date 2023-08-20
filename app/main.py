@@ -103,7 +103,7 @@ def medical_predict():
     
 
         # with open(medical_model_file, 'rb') as f:
-    pipeline = load_model('../models/cv_issue-pipeline_testing')
+    pipeline = load_model('./app/cv_issue-pipeline_testing.pkl')
     print(pipeline)
     if request.method == "POST":
         print("Keys in request.form:", list(request.form.keys()))
