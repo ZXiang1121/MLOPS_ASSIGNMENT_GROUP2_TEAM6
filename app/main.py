@@ -75,7 +75,7 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model(r'..\models\resale_price_pipeline_zx')
+    pipeline = load_model('../models/resale_price_pipeline_zx')
     print(pipeline)
     
     # Use the loaded pipeline to make predictions using the predict_model function
@@ -103,7 +103,7 @@ def medical_predict():
     
 
         # with open(medical_model_file, 'rb') as f:
-    pipeline = load_model(r'..\models\cv_issue-pipeline_testing')
+    pipeline = load_model('../models/cv_issue-pipeline_testing')
     print(pipeline)
     if request.method == "POST":
         print("Keys in request.form:", list(request.form.keys()))
@@ -128,7 +128,7 @@ def medical_predict():
         # print(data)
 
 
-        pipeline = load_model(r'.\cv_issue-pipeline_testing')
+        pipeline = load_model('../models/cv_issue-pipeline_testing')
         print(pipeline)
 
         data = {
