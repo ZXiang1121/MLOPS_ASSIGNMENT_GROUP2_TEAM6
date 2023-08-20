@@ -10,7 +10,13 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
-# model_path = r'models\my_best_pipeline'
+# model_path = r'models\resale_price_pipeline_zx'
+
+import os
+
+# script_dir = os.path.dirname(__file__)
+# model_path = os.path.join(script_dir, 'models', 'resale_price_pipeline_zx')
+# print(model_path)
 
 # # Load the entire pipeline from the saved pickle file using pycaret's load_model
 # loaded_pipeline = load_model(model_path)
@@ -18,9 +24,9 @@ app = Flask(__name__, template_folder='templates')
 
 # medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
 
-script_dir = os.path.dirname(os.path.abspath(os.getcwd()))
+# script_dir = os.path.dirname(os.path.abspath(os.getcwd()))
 
-model_dir = os.path.join(script_dir, 'models')
+# model_dir = os.path.join(script_dir, 'models')
 
 @app.route('/')
 def home():
@@ -69,8 +75,9 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model(r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\resale_price_pipeline_zx")
+    pipeline = load_model(r'..\models\resale_price_pipeline_zx')
     print(pipeline)
+    
     # Use the loaded pipeline to make predictions using the predict_model function
     pred_df = predict_model(pipeline, data=input_df)
 
@@ -92,10 +99,13 @@ def predict():
 
 @app.route('/medical_predict', methods=['GET', 'POST'])
 def medical_predict():
+    # models_dir = os.path.join(os.getcwd(), 'models')
+    
 
-    pipeline = load_model(r'C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline_testing')
-    print(pipeline)
+    
+    
     # with open(medical_model_file, 'rb') as f:
+    
     if request.method == "POST":
         print("Keys in request.form:", list(request.form.keys()))
         print("Keys in request.form:", list(request.form.values()))
@@ -118,8 +128,9 @@ def medical_predict():
         #     resting_ECG, max_HR, exercise_angina, old_peak, st_slope]]
         # print(data)
         # pipeline = pickle.load(open(medical_model_file, 'rb'))
-        
-        pipeline = load_model(r'C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline_testing')
+        # print(os.path.isfile(r'notebooks\cv_issue-pipeline_testing'))
+
+        pipeline = load_model(r'..\models\cv_issue-pipeline_testing')
         print(pipeline)
         # model = pickle.load(f)
         data = {
