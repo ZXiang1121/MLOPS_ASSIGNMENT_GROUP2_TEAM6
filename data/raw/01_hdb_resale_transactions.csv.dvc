@@ -1,0 +1,5 @@
+outs:
+- md5: b6b21f73e29aee0a406900932f1ebe3e
+  size: 26794925
+  hash: md5
+  path: 01_hdb_resale_transactions.csv

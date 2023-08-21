@@ -1,0 +1,5 @@
+outs:
+- md5: fe05fad3c483a3f1381de3d20726fef2
+  size: 36842
+  hash: md5
+  path: 02_medical_records.csv
