@@ -249,8 +249,8 @@ C:.
 
 ## Deployed URL to Website
 
-- Homepage URL:
+- Homepage URL: https://mlops-pk-zx.onrender.com
 
-- HDB Prediction URL:
+- HDB Prediction URL: https://mlops-pk-zx.onrender.com/medical_predict
 
-- Medical Prediction(Cardiovascular) URL:
+- Medical Prediction(Cardiovascular) URL: https://mlops-pk-zx.onrender.com/parik
