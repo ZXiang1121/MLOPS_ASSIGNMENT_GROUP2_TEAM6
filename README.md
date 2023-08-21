@@ -70,3 +70,6 @@ make docs
 python main.py
 
 ```
+
+A readme file for the deployment guide & folder structure and an URL to the
+web app
