@@ -246,3 +246,11 @@ C:.
         test_train_model.py
         __init__.py
 ```
+
+## Deployed URL to Website
+
+- Homepage URL:
+
+- HDB Prediction URL:
+
+- Medical Prediction(Cardiovascular) URL:
