@@ -10,23 +10,8 @@ import os
 
 app = Flask(__name__, template_folder=os.path.join(os.path.dirname(__file__), 'templates'))
 
-# model_path = r'models\resale_price_pipeline_zx'
 
 import os
-
-# script_dir = os.path.dirname(__file__)
-# model_path = os.path.join(script_dir, 'models', 'resale_price_pipeline_zx')
-# print(model_path)
-
-# # Load the entire pipeline from the saved pickle file using pycaret's load_model
-# loaded_pipeline = load_model(model_path)
-# print(loaded_pipeline)
-
-# medical_model_file = r"C:\Users\Zhang Xiang\Desktop\Year 3\Sem 1\IT3385 Machine Learning Operations - 2\Assignment\MLOPS_ASSIGNMENT_GROUP2_TEAM6\models\cv_issue-pipeline.pkl"
-
-# script_dir = os.path.dirname(os.path.abspath(os.getcwd()))
-
-# model_dir = os.path.join(script_dir, 'models')
 
 @app.route('/')
 def home():
