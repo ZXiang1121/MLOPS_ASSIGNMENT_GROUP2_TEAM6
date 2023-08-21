@@ -78,38 +78,49 @@ web app
 
 Link: https://dashboard.render.com/
 
-Step 1: Sign up / Login with GitHub
+Step 1: Set up requirements.txt file to install necessary libraries
 
-Step 2: Select Deploy with Web Service
-
-Step 3: Choose Github Repository for deployment.
-
-Step 4: Configure deployment setup
-
-```
-![Alt text](image-1.png)
-
-
-![Alt text](image-2.png)
-
-![Alt text](image-3.png)
-
-Configure Environment
-PYTHON_VERSION = 3.9.7
-
-![Alt text](image-4.png)
-
-After Deployment
-
-![Alt text](image-5.png)
-
-```
-
-Step 5: Set up requirements.txt file to install necessary libraries
-
-```
+```bash
 pip freeze >> requirements.txt / manually Configure
 
 ```
 
-Step 6:
+Step 2: Sign up / Login with GitHub
+
+Step 3: Select Deploy with Web Service
+
+Step 4: Choose Github Repository for deployment.
+
+Step 5: Configure deployment setup
+
+General Coniguration
+```bash
+Name = MLOPS_ZX_PK
+```
+
+Build & Deploy
+```bash
+Repository: https://github.com/ZXiang1121/MLOPS_ASSIGNMENT_GROUP2_TEAM6
+
+Branch: main
+
+Root Directory (optional): app
+
+Build Command: pip install -r requirements.txt
+
+Start Command: gunicorn main:app
+
+Auto-Deploy: No
+
+```
+
+Configure Environment
+Key              Value
+```bash
+PYTHON_VERSION = 3.9.7
+```
+
+
+```
+
+Step 6: Hover over "Manual Deploy" button & select "Deploy latest commit"
