@@ -64,7 +64,7 @@ make docs
 
 "# MLOPS_ASSIGNMENT_GROUP2_TEAM6"
 
-## Run Application
+## Run Application on Local Server
 
 ```
 python main.py
@@ -73,3 +73,43 @@ python main.py
 
 A readme file for the deployment guide & folder structure and an URL to the
 web app
+
+## Deployment Configuration with Render
+
+Link: https://dashboard.render.com/
+
+Step 1: Sign up / Login with GitHub
+
+Step 2: Select Deploy with Web Service
+
+Step 3: Choose Github Repository for deployment.
+
+Step 4: Configure deployment setup
+
+```
+![Alt text](image-1.png)
+
+
+![Alt text](image-2.png)
+
+![Alt text](image-3.png)
+
+Configure Environment
+PYTHON_VERSION = 3.9.7
+
+![Alt text](image-4.png)
+
+After Deployment
+
+![Alt text](image-5.png)
+
+```
+
+Step 5: Set up requirements.txt file to install necessary libraries
+
+```
+pip freeze >> requirements.txt / manually Configure
+
+```
+
+Step 6:
