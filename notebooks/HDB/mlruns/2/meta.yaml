@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/parikshit%20joshi/Documents/GitHub/pycaret/notebooks/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/HDB/mlruns/2
+creation_time: 1692614600332
+experiment_id: '2'
+last_update_time: 1692614600332
+lifecycle_stage: active
+name: hdb_model_run_gbr

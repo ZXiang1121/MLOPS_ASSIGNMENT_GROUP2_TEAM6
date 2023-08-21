@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/parikshit%20joshi/Documents/GitHub/pycaret/notebooks/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/HDB/mlruns/1/0478e7d3d8e54dfe8684781fcf6171a5/artifacts
+end_time: 1692613523943
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: 0478e7d3d8e54dfe8684781fcf6171a5
+run_name: Gradient Boosting Regressor
+run_uuid: 0478e7d3d8e54dfe8684781fcf6171a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692613522405
+status: 3
+tags: []
+user_id: parikshit joshi

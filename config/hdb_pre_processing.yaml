@@ -1,0 +1,19 @@
+dataset:
+  raw_data: /data/raw/01_hdb_resale_transactions.csv
+  processed_data: /data/processed/01_resale_transactions.csv
+
+features:
+  drop_features: ['postal_code','year','month','street_name','lease_commence_date', 'block','town','resale_price']
+  numerical_features:
+    ['latitude','longitude','cbd_dist','min_dist_mrt','remaining_lease','floor_area_sqm']
+  categorical_features:
+    ['flat_type','storey_range','flat_model','region']
+  target_features: "log_resale_price"
+
+setup:
+  train_size: 0.8
+  test_size: 0.2
+  memory: "None"
+
+file_location:
+  generate_pkl: /app/models/hdb_best_tuned_model

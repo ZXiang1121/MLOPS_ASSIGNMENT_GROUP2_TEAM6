@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/parikshit%20joshi/Documents/GitHub/pycaret/notebooks/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/HDB/mlruns/1/ad26a2f0eb284cdcb7b1f3e5277b0d9d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+run_id: ad26a2f0eb284cdcb7b1f3e5277b0d9d
+run_name: Session Initialized 5ef5
+run_uuid: ad26a2f0eb284cdcb7b1f3e5277b0d9d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692612982913
+status: 1
+tags: []
+user_id: parikshit joshi
