@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1692611164754
+current_stage: None
+description: ''
+last_updated_timestamp: 1692611164754
+name: Best_Tuned_Model
+run_id: 3cf72734fae2429c9c8ba12a44d35f0c
+run_link: ''
+source: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/3cf72734fae2429c9c8ba12a44d35f0c/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1

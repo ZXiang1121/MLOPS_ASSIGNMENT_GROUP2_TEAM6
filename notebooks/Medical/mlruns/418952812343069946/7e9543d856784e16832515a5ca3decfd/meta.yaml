@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/7e9543d856784e16832515a5ca3decfd/artifacts
+end_time: 1692610464393
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 7e9543d856784e16832515a5ca3decfd
+run_name: Random Forest Classifier
+run_uuid: 7e9543d856784e16832515a5ca3decfd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692610463420
+status: 3
+tags: []
+user_id: Zhang Xiang

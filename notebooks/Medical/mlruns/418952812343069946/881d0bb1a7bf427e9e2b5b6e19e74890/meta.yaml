@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/881d0bb1a7bf427e9e2b5b6e19e74890/artifacts
+end_time: 1692610256329
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 881d0bb1a7bf427e9e2b5b6e19e74890
+run_name: CatBoost Classifier
+run_uuid: 881d0bb1a7bf427e9e2b5b6e19e74890
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692610255303
+status: 3
+tags: []
+user_id: Zhang Xiang

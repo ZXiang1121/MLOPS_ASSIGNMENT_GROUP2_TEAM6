@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/1701b910db1541f284bfa01b6060d2b9/artifacts
+end_time: 1692609988521
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 1701b910db1541f284bfa01b6060d2b9
+run_name: SVM - Linear Kernel
+run_uuid: 1701b910db1541f284bfa01b6060d2b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692609987955
+status: 3
+tags: []
+user_id: Zhang Xiang

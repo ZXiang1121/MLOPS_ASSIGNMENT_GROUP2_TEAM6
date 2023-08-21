@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/65e30bdd9e514eae9bc97b2afe435e9a/artifacts
+end_time: 1692609981562
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 65e30bdd9e514eae9bc97b2afe435e9a
+run_name: Gradient Boosting Classifier
+run_uuid: 65e30bdd9e514eae9bc97b2afe435e9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692609981029
+status: 3
+tags: []
+user_id: Zhang Xiang

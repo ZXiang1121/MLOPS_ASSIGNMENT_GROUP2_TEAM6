@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/7c87a201396b445c9ffdcd4066b1d960/artifacts
+end_time: 1692610467399
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 7c87a201396b445c9ffdcd4066b1d960
+run_name: Ridge Classifier
+run_uuid: 7c87a201396b445c9ffdcd4066b1d960
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692610466971
+status: 3
+tags: []
+user_id: Zhang Xiang

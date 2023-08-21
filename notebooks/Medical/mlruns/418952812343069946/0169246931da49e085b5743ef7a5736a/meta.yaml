@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Zhang%20Xiang/Desktop/Year%203/Sem%201/IT3385%20Machine%20Learning%20Operations%20-%202/Assignment/MLOPS_ASSIGNMENT_GROUP2_TEAM6/notebooks/Medical/mlruns/418952812343069946/0169246931da49e085b5743ef7a5736a/artifacts
+end_time: 1692609985041
+entry_point_name: ''
+experiment_id: '418952812343069946'
+lifecycle_stage: active
+run_id: 0169246931da49e085b5743ef7a5736a
+run_name: Light Gradient Boosting Machine
+run_uuid: 0169246931da49e085b5743ef7a5736a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1692609984400
+status: 3
+tags: []
+user_id: Zhang Xiang
