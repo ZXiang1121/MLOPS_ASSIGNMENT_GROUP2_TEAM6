@@ -14,7 +14,7 @@ content%}
           <div class="form-group col-md-6">
             <div class="mb-3">
               <label for="exampleInputAge" class="form-label">Age</label>
-              <input type="number" name = "age" class="form-control"/>
+              <input type="number" name = "age" class="form-control" placeholder="Age of a patient"/>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ content%}
             >
 
             <select
-              class="mb-0 form-select"
+              class="mb-3 form-select"
               aria-label="Default select example"
               name = "resting_ECG"
               required
@@ -151,7 +151,7 @@ content%}
                 aria-describedby="cholesterolHelp"
                 min="0"
                 max="300"
-                placeholder="234 (Normal cholesterol level below for adults 200mg/dL)"
+                placeholder="Serum cholesterol level in blood"
                 required
               />
             </div>
@@ -165,7 +165,7 @@ content%}
               name="old_peak"
               id="exampleInputOldpeak"
               aria-describedby="OldpeakHelp"
-              placeholder="ST [Numeric value measured in depression]"
+              placeholder="Numeric value measured in depression"
               required
             />
           </div>
@@ -201,6 +201,7 @@ content%}
                 aria-describedby="Max_HRHelp"
                 min="0"
                 max="400"
+                placeholder="Maximum heart rate achieved"
                 required
               />
             </div>
@@ -271,5 +272,7 @@ content%}
   function updateValue(newValue) {
     document.getElementById("rangeValue").textContent = newValue;
   }
+  
+  
 </script>
 {% endblock %}
