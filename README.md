@@ -93,12 +93,14 @@ Step 4: Choose Github Repository for deployment.
 
 Step 5: Configure deployment setup
 
-General Coniguration
+**General Coniguration**
+
 ```bash
 Name = MLOPS_ZX_PK
 ```
 
-Build & Deploy
+**Build & Deploy**
+
 ```bash
 Repository: https://github.com/ZXiang1121/MLOPS_ASSIGNMENT_GROUP2_TEAM6
 
@@ -114,13 +116,133 @@ Auto-Deploy: No
 
 ```
 
-Configure Environment
-Key              Value
+**Configure Environment (Important)**
+Key Value
+
 ```bash
 PYTHON_VERSION = 3.9.7
 ```
 
-
-```
-
 Step 6: Hover over "Manual Deploy" button & select "Deploy latest commit"
+
+## Folder Structure
+
+```Bash
+C:.
+│   .gitignore
+│   .pre-commit-config.yaml
+│   logs.log
+│   Makefile
+│   poetry.lock
+│   pyproject.toml
+│   README.md
+│
+├───.dvc
+│       .gitignore
+│       config
+│
+├───app
+│   │   build.sh
+│   │   Dockerfile
+│   │   logs.log
+│   │   main.py
+│   │   requirements.txt
+│   │
+│   ├───models
+│   │       cv_issue-pipeline_1.pkl
+│   │       medical_best_tuned_model.pkl
+│   │
+│   ├───None
+│   │   └───joblib
+│   │       └───pycaret
+│   │           └───internal
+│   │               └───pipeline
+│   │                   ├───_full_transform
+│   │                   │       func_code.py
+│   │                   │
+│   │                   └───_transform_one
+│   │                           func_code.py
+│   │
+│   ├───static
+│   │   ├───images
+│   │   │       Medical Background.jpg
+│   │   │       medical.jpg
+│   │   │
+│   │   ├───js
+│   │   │       script.js
+│   │   │
+│   │   └───styles
+│   │           style.css
+│   │
+│   └───templates
+│       │   base.html
+│       │   home.html
+│       │   medical_predict.html
+│       │   medical_result.html
+│       │   parik_hdb.html
+│       │   submit.html
+│       │
+│       ├───includes
+│       │       _formHelper.html
+│       │
+│       └───navbar
+│               userNavbar.html
+│
+├───config
+│   │   main.yaml
+│   │   medical_pre_processing.yaml
+│   │
+│   ├───model
+│   │       model1.yaml
+│   │       model2.yaml
+│   │
+│   └───process
+│           process1.yaml
+│           process2.yaml
+│
+├───data
+│   │   raw.dvc
+│   │
+│   ├───final
+│   │       .gitkeep
+│   │
+│   ├───processed
+│   │       .gitkeep
+│   │
+│   └───raw
+│           .gitkeep
+│           01_hdb_resale_transactions.csv
+│           02_medical_records.csv
+│
+├───docs
+│       .gitkeep
+│
+├───models
+│       .gitkeep
+│       best_gbr__pipeline.pkl
+│       cv_issue-pipeline.pkl
+│       cv_issue-pipeline_testing.pkl
+│       resale_price_pipeline_zx.pkl
+│
+├───notebooks
+│   │   .gitkeep
+│   │
+│   ├───HDB
+│   │       hdb_-dvc.ipynb
+│   │       hdb_modelling.ipynb
+│   │
+│   └───Medical
+│           logs.log
+│           Medical_Prediction.ipynb
+│           TestingDVC.ipynb
+│
+├───src
+│       process.py
+│       train_model.py
+│       __init__.py
+│
+└───tests
+        test_process.py
+        test_train_model.py
+        __init__.py
+```
