@@ -138,8 +138,22 @@ C:.
 │   README.md
 │
 ├───.dvc
-│       .gitignore
-│       config
+│   │   .gitignore
+│   │   config
+│   │
+│   ├───cache
+│   │   └───files
+│   │       └───md5
+│   │           ├───b6
+│   │           │       b21f73e29aee0a406900932f1ebe3e
+│   │           │
+│   │           └───fe
+│   │                   05fad3c483a3f1381de3d20726fef2
+│   │
+│   └───tmp
+│           lock
+│           rwlock
+│           rwlock.lock
 │
 ├───app
 │   │   build.sh
@@ -149,7 +163,7 @@ C:.
 │   │   requirements.txt
 │   │
 │   ├───models
-│   │       cv_issue-pipeline_1.pkl
+│   │       hdb_best_tuned_model.pkl
 │   │       medical_best_tuned_model.pkl
 │   │
 │   ├───None
@@ -158,7 +172,15 @@ C:.
 │   │           └───internal
 │   │               └───pipeline
 │   │                   ├───_full_transform
-│   │                   │       func_code.py
+│   │                   │   │   func_code.py
+│   │                   │   │
+│   │                   │   ├───90b78754442cfc9dd0768f331acd907b
+│   │                   │   │       metadata.json
+│   │                   │   │       output.pkl
+│   │                   │   │
+│   │                   │   └───d692db623b332ef1060ba096f870c6ae
+│   │                   │           metadata.json
+│   │                   │           output.pkl
 │   │                   │
 │   │                   └───_transform_one
 │   │                           func_code.py
@@ -187,8 +209,34 @@ C:.
 │       │
 │       └───navbar
 │               userNavbar.html
+│   │
+│   ├───static
+│   │   ├───images
+│   │   │       Medical Background.jpg
+│   │   │       medical.jpg
+│   │   │
+│   │   ├───js
+│   │   │       script.js
+│   │   │
+│   │   └───styles
+│   │           style.css
+│   │
+│   └───templates
+│       │   base.html
+│       │   home.html
+│       │   medical_predict.html
+│       │   medical_result.html
+│       │   parik_hdb.html
+│       │   submit.html
+│       │
+│       ├───includes
+│       │       _formHelper.html
+│       │
+│       └───navbar
+│               userNavbar.html
 │
 ├───config
+│   │   hdb_pre_processing.yaml
 │   │   main.yaml
 │   │   medical_pre_processing.yaml
 │   │
@@ -201,40 +249,133 @@ C:.
 │           process2.yaml
 │
 ├───data
-│   │   raw.dvc
-│   │
 │   ├───final
 │   │       .gitkeep
 │   │
 │   ├───processed
-│   │       .gitkeep
+│   │       02_medical_records_processed.csv
 │   │
 │   └───raw
+│           .gitignore
 │           .gitkeep
 │           01_hdb_resale_transactions.csv
+│           01_hdb_resale_transactions.csv.dvc
 │           02_medical_records.csv
+│           02_medical_records.csv.dvc
 │
 ├───docs
 │       .gitkeep
 │
 ├───models
 │       .gitkeep
-│       best_gbr__pipeline.pkl
-│       cv_issue-pipeline.pkl
-│       cv_issue-pipeline_testing.pkl
-│       resale_price_pipeline_zx.pkl
 │
 ├───notebooks
 │   │   .gitkeep
 │   │
 │   ├───HDB
-│   │       hdb_-dvc.ipynb
-│   │       hdb_modelling.ipynb
-│   │
+│   │   │   hdb_modelling.ipynb
+│   │   │
+│   │   ├───mlruns
+│   │   │   ├───0
+│   │   │   │       meta.yaml
+│   │   │   │
+│   │   │   ├───1
+│   │   │   │   │   meta.yaml
+│   │   │   │   │
+│   │   │   │   ├───0478e7d3d8e54dfe8684781fcf6171a5
+│   │   │   │   │   │   meta.yaml
+│   │   │   │   │   │
+│   │   │   │   │   ├───artifacts
+│   │   │   │   │   │   │   Holdout.html
+│   │   │   │   │   │   │   Results.html
+│   │   │   │   │   │   │
+│   │   │   │   │   │   └───model
+│   │   │   │   │   │           conda.yaml
+│   │   │   │   │   │           MLmodel
+│   │   │   │   │   │           model.pkl
+│   │   │   │   │   │           python_env.yaml
+│   │   │   │   │   │           requirements.txt
+│   │   │   │   │   │
 │   └───Medical
-│           logs.log
-│           Medical_Prediction.ipynb
-│           TestingDVC.ipynb
+│       │   logs.log
+│       │   Medical_Prediction.ipynb
+│       │
+│       ├───.ipynb_checkpoints
+│       │       Medical_Prediction-checkpoint.ipynb
+│       │
+│       ├───catboost_info
+│       │   │   catboost_training.json
+│       │   │   learn_error.tsv
+│       │   │   time_left.tsv
+│       │   │
+│       │   ├───learn
+│       │   │       events.out.tfevents
+│       │   │
+│       │   └───tmp
+│       ├───mlruns
+│       │   ├───.trash
+│       │   ├───0
+│       │   │       meta.yaml
+│       │   │
+│       │   ├───418952812343069946
+│       │   │   │   meta.yaml
+│       │   │   │
+│       │   │   ├───0169246931da49e085b5743ef7a5736a
+│       │   │   │   │   meta.yaml
+│       │   │   │   │
+│       │   │   │   ├───artifacts
+│       │   │   │   │   │   Results.html
+│       │   │   │   │   │
+│       │   │   │   │   └───model
+│       │   │   │   │           conda.yaml
+│       │   │   │   │           MLmodel
+│       │   │   │   │           model.pkl
+│       │   │   │   │           python_env.yaml
+│       │   │   │   │           requirements.txt
+│       │   │   │   │
+│       │   │   │   ├───metrics
+│       │   │   │   │       Accuracy
+│       │   │   │   │       AUC
+│       │   │   │   │       F1
+│       │   │   │   │       Kappa
+│       │   │   │   │       MCC
+│       │   │   │   │       Prec
+│       │   │   │   │       Recall
+│       │   │   │   │       TT
+│       │   │   │   │
+│       │   │   │   ├───params
+│       │   │   │   │       boosting_type
+│       │   │   │   │       class_weight
+│       │   │   │   │       colsample_bytree
+│       │   │   │   │       importance_type
+│       │   │   │   │       learning_rate
+│       │   │   │   │       max_depth
+│       │   │   │   │       min_child_samples
+│       │   │   │   │       min_child_weight
+│       │   │   │   │       min_split_gain
+│       │   │   │   │       num_leaves
+│       │   │   │   │       n_estimators
+│       │   │   │   │       n_jobs
+│       │   │   │   │       objective
+│       │   │   │   │       random_state
+│       │   │   │   │       reg_alpha
+│       │   │   │   │       reg_lambda
+│       │   │   │   │       subsample
+│       │   │   │   │       subsample_for_bin
+│       │   │   │   │       subsample_freq
+│       │   │   │   │
+│       │   │   │   └───tags
+│       │   │   │           mlflow.log-model.history
+│       │   │   │           mlflow.parentRunId
+│       │   │   │           mlflow.runName
+│       │   │   │           mlflow.source.name
+│       │   │   │           mlflow.source.type
+│       │   │   │           mlflow.user
+│       │   │   │           Run ID
+│       │   │   │           Run Time
+│       │   │   │           Source
+│       │   │   │           URI
+│       │   │   │           USI
 │
 ├───src
 │       process.py
