@@ -60,7 +60,7 @@ def predict():
     # Convert the input_data dictionary to a DataFrame
     input_df = pd.DataFrame([input_data])
 
-    pipeline = load_model('models/hdb_best_tuned_model')
+    pipeline = load_model('models/resale_price_pipeline_zx')
     print(pipeline)
     
     # Use the loaded pipeline to make predictions using the predict_model function
