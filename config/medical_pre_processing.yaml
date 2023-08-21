@@ -1,5 +1,6 @@
 dataset:
-  data: /data/raw/02_medical_records.csv
+  raw_data: /data/raw/02_medical_records.csv
+  processed_data: /data/processed/02_medical_records_processed.csv
 
 features:
   drop_features: []
@@ -14,3 +15,6 @@ setup:
   train_size: 0.8
   test_size: 0.2
   memory: "None"
+
+file_location:
+  generate_pkl: /app/models/medical_best_tuned_model
