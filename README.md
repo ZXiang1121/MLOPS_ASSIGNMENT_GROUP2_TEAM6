@@ -390,6 +390,8 @@ C:.
 
 ## Deployed URL to Website
 
+May take awhile to load into the webpage, as we are using a free hosting server.
+
 - Homepage URL: https://mlops-pk-zx.onrender.com
 
 - HDB Prediction URL: https://mlops-pk-zx.onrender.com/parik
