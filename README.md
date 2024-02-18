@@ -392,6 +392,7 @@ C:.
 
 - Homepage URL: https://mlops-pk-zx.onrender.com
 
-- HDB Prediction URL: https://mlops-pk-zx.onrender.com/medical_predict
+- HDB Prediction URL: https://mlops-pk-zx.onrender.com/parik
 
-- Medical Prediction(Cardiovascular) URL: https://mlops-pk-zx.onrender.com/parik
+- Medical Prediction(Cardiovascular) URL: https://mlops-pk-zx.onrender.com/medical_predict
+
