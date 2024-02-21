@@ -1,5 +1,8 @@
 # MLOPS_ASSIGNMENT_GROUP2_TEAM6
 
+
+
+
 ## Tools used in this project
 
 - [Poetry](https://towardsdatascience.com/how-to-effortlessly-publish-your-python-package-to-pypi-using-poetry-44b305362f9f): Dependency management - [article](https://mathdatasimplified.com/2023/06/12/poetry-a-better-way-to-manage-python-dependencies/)
@@ -398,3 +401,9 @@ May take awhile to load into the webpage, as we are using a free hosting server.
 
 - Medical Prediction(Cardiovascular) URL: https://mlops-pk-zx.onrender.com/medical_predict
 
+## Demo
+
+![image](https://github.com/ZXiang1121/MLOPS_ASSIGNMENT_GROUP2_TEAM6/assets/98081173/74776d99-6320-4698-afc3-1f54650156b7)
+
+
+![image](https://github.com/ZXiang1121/MLOPS_ASSIGNMENT_GROUP2_TEAM6/assets/98081173/4a5c9e05-7ac5-4a16-88dd-61022ff6d1b6)
